@@ -1,26 +1,6 @@
 ﻿#include <iostream>
 using namespace std;
 
-void CheckValidInput()
-{
-    if (cin.fail())
-    {
-        throw "Incorrect input!";
-    }
-}
-
-void CheckValidParams(int n, double h)
-{
-    if (n < 4)
-    {
-        throw "Input correct data!";
-    }
-    if (h <= 0)
-    {
-        throw "Input correct data!";
-    }
-}
-
 double calculate(double x, int n)
 {
     double y;
@@ -44,6 +24,26 @@ double calculate(double x, int n)
         }
     }
     return y;
+}
+
+void CheckValidInput()
+{
+    if (cin.fail())
+    {
+        throw "Incorrect input!";
+    }
+}
+
+void CheckValidParams(int n, double h)
+{
+    if (n < 4)
+    {
+        throw "Input correct data!";
+    }
+    if (h <= 0)
+    {
+        throw "Input correct data!";
+    }
 }
 
 int main()
